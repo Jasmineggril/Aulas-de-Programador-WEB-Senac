@@ -1,0 +1,25 @@
+
+body {
+    
+}
+h1{
+    color: blueviolet;
+    padding: auto;
+    text-align: center;
+    -webkit-text-stroke: 1px olive;
+}
+
+
+table, th, td{ 
+    
+    border: 9px solid gray;
+    border-style: 20px;
+    background-color: black (255, 255, 255, 0.5);
+    text-align: center;
+    margin: 0 auto;
+}
+
+
+
+
+    
