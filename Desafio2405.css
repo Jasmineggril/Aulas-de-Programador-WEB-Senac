@@ -1,0 +1,33 @@
+ body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+    text-align: center;
+    background-color:darkgray;
+}
+
+h2{
+    text-align: center;
+    background-color:darkgray;
+}
+
+h3{
+    text-align: center;
+    background-color:darkgray;
+}
+
+#linha{
+    border-bottom: 3px solid black;
+}
+
+#objetivo{
+    margin-left: 30px;
+}
+  
+    
+
+
+
+
+
