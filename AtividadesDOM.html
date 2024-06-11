@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset= "UTF-8">
+	<meta nome="viewport" content="widtrh=device-width, initial-scale=1.0">
+	<title>Primeiros passos com DOM</title>
+</head>
+
+<style>
+	body{
+	 	backgroud: rgb(128, 163, 129);
+		color: rgb(106, 82, 110);
+		font: normal 18pt Arial;
+}
+</style>
+
+<body>
+	<h1>Kim Possible</h1>
+	<p>Kim Possible poderia ser só mais uma garota comum cursando o Ensino Médio, mas na verdade, 
+        o que ela gosta de mesmo de fazer é salvar o mundo das mãos de terríveis vilões. 
+        Para isso, Kim conta com a ajuda de seu melhor amigo do colégio, Ron Stoppable, s
+        eu animal de estimação, uma toupeira chamada Rufus e Wade, um super gênio do computador.</p>
+
+     <div class="Serieaqui">
+         Serie aqui
+    </div>
+
+
+	<h2>JOGO DE VIDEO GAME</h2>
+
+<div class="Serieaqui">
+	Clique para saber mais.
+</div>
+
+    
+<img src="./Kim possible.jpg">
+
+
+<script>
+
+var p1 = window.document.getElementsByTagName(`h1`)[0];
+	
+	p1.style.background = 'black';
+    p1.style.color = 'white';
+    p1.style.textAlign = `center`;
+
+var p1 = window.document.getElementsByTagName(`p`)[0];
+	
+	p1.style.background = 'purple';
+    p1.style.color = 'white';
+
+var p1 = window.document.getElementsByTagName(`h2`)[0];
+	
+	p1.style.background = 'green';
+    p1.style.color = 'white';
+
+var d=window.document.getElementsByClassName(`Serieaqui`)[0];
+
+    d.style.background = 'blue';
+    p1.style.color = 'white';
+
+var d=window.document.getElementsByClassName(`Serieaqui`)[1];
+
+    d.style.background = 'pink';
+    p1.style.color = 'white';   
+
+</script>
+</body>
+</html>
