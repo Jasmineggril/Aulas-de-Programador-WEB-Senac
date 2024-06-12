@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset= "UTF-8">
+	<meta nome="viewport" content="widtrh=device-width, initial-scale=1.0">
+	<title>DOM</title>
+</head>
+
+<body>
+    <h1>BUSCANDO DADOS</h1>
+    <form>
+        <input type="text" id="nome"/>
+        <input type="email" id="email"/>
+        
+
+        <div id="resCadastro"></div>
+
+    <input type="button" value="Cadatro de usuário" onclick="cadastrar()" />
+    </form>
+    <script>
+    function cadastrar() {
+        var nome = window.documento.getElementById("nome").value;
+        var email = window.document.getElementByIda("email").value;
+        var resCadastro = window.document.getElementById("resCadastro").value;  
+        
+       resCadastro.innerHTML  = 'Seu nome é ${nome}<br> e seu email é ${email}';
+    }   
+
+</script>
+</body>
+</html>
