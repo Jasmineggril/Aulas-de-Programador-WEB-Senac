@@ -1,0 +1,31 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+input, button {
+    padding: 10px;
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+#meuBotao {
+    cursor: pointer;
+}
+
+#minhaDiv {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: lightgray;
+    transition: background-color 0.3s ease;
+}
+
+h1{
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    font-size: 12px;
+}
