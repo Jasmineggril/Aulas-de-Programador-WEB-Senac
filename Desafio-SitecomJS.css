@@ -1,0 +1,161 @@
+header {
+  margin-bottom: 20px;
+}
+
+header h1 {
+  color: rgb(37, 36, 36);
+  font-size: 14rem;
+  margin: 0;
+  padding: 0.5rem 0;
+  text-align: center;
+}
+
+
+.navbar-nav .nav-link {
+  font-size: 1rem;
+  margin-right: 10px;
+}
+
+.navbar-nav .nav-link.active {
+  font-weight: bold;
+}
+
+.form-control {
+  margin-right: 10px;
+}
+
+
+.carousel-item img {
+  height: 60vh;
+  object-fit: cover;
+}
+
+.carousel-caption {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.carousel-caption h5 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.carousel-caption p {
+  font-size: 1rem;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  padding: 10px;
+}
+
+
+.container.marketing .row {
+  margin-top: 50px;
+}
+
+.container.marketing .col-lg-4 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.container.marketing img {
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.container.marketing h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.container.marketing p {
+  font-size: 1rem;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+}
+
+
+footer {
+  background-color: #f8f9fa;
+  padding: 20px 0;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+footer p a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+footer p a:hover {
+  text-decoration: underline;
+}
+
+body {
+  background-color: honeydew;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+button.clicked {
+  background-color: #28a745; 
+  color: white; 
+}
+
+
+.container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  
+}
+
+label {
+  margin-top: 10px;
+}
+
+input {
+  margin-bottom: 10px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+

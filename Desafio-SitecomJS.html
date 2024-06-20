@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FILMESCLICK</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="Desafio-SitecomJS.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <h1>FILMESCLICK</h1>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarNav">
+                                <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="navLinks">
+                                    <li class="nav-item">
+                                        <a href="CADASATRO.html" aria-current="page" href="#">CADASTRE-SE AQUI</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="https://www.CINEMAMAISPROOXIMOS.COM" href="#">CINEMAS MAIS PRÓXIMOS</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="https://www.CONTATO.COM" href="#">CONTATO</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </header>
+    <header>        
+        <main class="container my-4">
+            <div class="text-center mb-4">
+                <div class="container">
+                    <h2>ACHE UM FILME</h2>
+                    <form id="mediaForm">
+                        <label for="nacional">BRASILEIRO</label>
+                        <input type="text" id="nacional" required>
+                        <button type="button" onclick="calcularMedia()">PROCURAR</button>
+                        <br>
+                        <label for="internacional">INTERNACIONAL</label>
+                        <input type="text" id="internacional" required>
+                        <button type="button" onclick="calcularMedia()">PROCURAR</button>
+                    </form>
+                    <p id="resultado"> FILMES</p>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <form class="carousel-inner">
+                <img src="./img/Divertidamente.webp" class="d-block w-100" alt="Filme 1">
+                <div class="carousel-item active">
+                    <div class="carousel-caption d-none d-md-block">
+                        <div class="carousel-inner">
+                            <a href="outra_pagina.html">
+                                <img src="./img/Divertidamente.webp" class="d-block w-100" alt="Filme 1">
+                            </a>
+                            <div class="carousel-item active">
+                                <div class="carousel-caption d-none d-md-block">
+                        <h5>DIVERTIDAMENTE</h5>
+                        <p>Riley é uma garota divertida de 11 anos de idade, que deve enfrentar mudanças importantes em sua vida 
+                          quando seus pais decidem deixar a sua cidade natal, no estado de Minnesota, para viver em San Francisco. 
+                          Dentro do cérebro de Riley, convivem várias emoções diferentes, como a Alegria, o Medo, a Raiva, o Nojinho e a Tristeza.
+                           A líder deles é Alegria, que se esforça bastante para fazer com que a vida de Riley seja sempre feliz. Entretanto, 
+                           uma confusão na sala de controle faz com que ela e Tristeza sejam expelidas para fora do local. Agora, elas precisam percorrer as várias 
+                           ilhas existentes nos pensamentos de Riley para que possam retornar à sala de controle - e, 
+                          enquanto isto não acontece, a vida da garota muda radicalmente.
+                        </p>
+                    </div>
+            </form>
+                <form class="carousel-item">
+                     <img src="./img/A teia.jpg" class="d-block w-100" alt="Filme 2">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>A TEIA</h5>
+                        <p>A teia, é um emocionante thriller de suspense policial, onde o ex-detetive de homicídios, Roy Freeman (Russel Crowe), 
+                          está passando por um tratamento intensivo contra o Alzheimer e é forçado a revisitar um caso do qual não consegue se lembrar.
+                           Roy descobre que um homem que condenou culpado pelo assassinato de um professor universitário saiu do corredor da morte após ser inocentado. 
+                           Mesmo sem muitas memórias daquela época, ele fica intrigado e entra em contato com seu ex-parceiro de trabalho para que juntos possam refazer os 
+                           passos dessa investigação. Olhando para o caso sob uma nova perspectiva, Freeman não só faz novas descobertas sobre o caso, mas como sobre si mesmo também. 
+                           Ele, então, deve reunir as evidências brutais de uma investigação de assassinato de uma década, descobrindo uma rede sinistra de segredos enterrados e traições 
+                           ligadas ao seu passado. Com apenas instintos para confiar, ele enfrenta uma verdade assustadora: às vezes, é melhor deixar o passado a onde está.
+                        </p>   
+                        </div>
+                    </form>
+                </div>
+            </div>
+                </div>
+                <form class="carousel-item">
+                     <img src="./img/Love.jpg" class="d-block w-100" alt="Filme 3">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>LOVE LIES BLEEDING: O AMOR SANGRA </h5>
+                        <p>Dirigido por Rose Glass, Love Lies Bleeding é um romance ambientado na década de 1980 que acompanha a vida da
+                           reclusa gerente de academia Lou (Kristen Stewart), que acaba se apaixonando por Jackie (Katy M. O'Brian), uma ambiciosa
+                           fisiculturista que viaja da cidade até Las Vegas em busca de seu sonho. Mas essa história de amor fulminante entre elas desencadeia 
+                           a violência, puxando-as profundamente para a teia da família criminosa de Lou, resultando em um romance cheio de ego,
+                           desejos, sangue e vingança. O elenco traz ainda Anna Baryshnikov, Ed Harris, Dave Franco e Jena Malone.
+                        </p>
+                    </div>
+                </form>
+                </div>
+            </div>
+                <br>
+                <br>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">ESTREIAS</span>
+                </button>
+                    <br>
+                    <br>
+        <div class="container marketing mt-5">
+            <div class="row">
+                <div class="col-lg-4">
+                        <img src="./img/It coisa.jpg" class="bd-placeholder-img rounded-circle" width="140" height="140" alt="Filme A">
+                        <h2 class="fw-normal">A COISA</h2>
+                        <p>Dirigido por Rose Glass, Love Lies Bleeding é um romance ambientado na década de 1980 que acompanha a vida da 
+                        reclusa gerente de academia Lou (Kristen Stewart), que acaba se apaixonando por Jackie (Katy M. O'Brian), uma
+                        ambiciosa fisiculturista que viaja da cidade até Las Vegas em busca de seu sonho. Mas essa história de amor 
+                        fulminante entre elas desencadeia a violência, puxando-as profundamente para a teia da família criminosa de Lou,
+                        resultando em um romance cheio de ego, desejos, sangue e vingança. O elenco traz ainda Anna Baryshnikov, Ed Harris, 
+                        Dave Franco e Jena Malone.</p>
+                        <br>
+                        <br>
+                        <button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modalFilmeC">Ver detalhes &raquo;</button>
+                        <br>
+                    <br>
+                </div>
+        <div class="container marketing mt-5">
+            <div class="row">
+                <div class="col-lg-4">
+                         <img src="./img/CAOSjpg.jpg" class="bd-placeholder-img rounded-circle" width="140" height="140" alt="Filme B">
+                        <h2 class="fw-normal">MUNDO EM CAOS</h2>
+                        <p>Em Mundo em Caos, em um futuro pós-apocalíptico onde a humanidade já começou a colonizar outros planetas, 
+                        uma infecção rara e perigosa tomou conta do planeta e causou o inimaginável: todas as mulheres foram mortas, e 
+                        agora os pensamentos de todos os homens tornaram-se audíveis. 
+                        O jovem Todd, temendo a destruição total, decide partir fugindo de sua cidade e, durante sua jornada, conheça 
+                        pela primeira vez na vida uma mulher.</p>
+                        <br>
+                        <br>
+                        <button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modalFilmeB">Ver detalhes &raquo;</button>
+                    </div>
+                </div>
+            </div>
+        </div> 
+           <div class="container marketing mt-5">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <img src="./img/O_Encontro_de_Carl_-_Pôster_Nacional.jpg" class="bd-placeholder-img rounded-circle" width="140" height="140" alt="Filme C">
+                        <h2 class="fw-normal">O ENCONTRO DE CARL</h2>
+                        <p>Nessa nova história, Carl relutantemente concorda em sair para um encontro com uma amiga, 
+                        mas não tem a menor ideia de como funcionam os namoros hoje em dia. 
+                        Dug entra em cena para acalmar os nervos de Carl antes do encontro e oferece algumas dicas eficientes</p>
+                        <br>
+                        <br>
+                        <button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modalFilmeC">Ver detalhes &raquo;</button>
+                        <br>
+                    <br>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="container mt-5">
+        <p class="float-end"><a href="#">Voltar ao topo</a></p>
+        <p>&copy; 2024 Company, Inc. &middot; <a href="#">Privacidade</a> &middot; <a href="#">Termos</a></p>
+    </footer>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="Desafio-SitecomJS.js"></script>
+
+</body>
+</html>
