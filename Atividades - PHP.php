@@ -15,15 +15,16 @@
         Nome: <input type="text" name="username" /><br />
         Nome de Usuário: <input type="text" name="ursernamename"/><br />
         Email: <input type="email" name="email" /><br />
-        CPF: <input type="number" name="number" /><br />
-        Data de Nascimento: <input type="number" name="number" /><br />
-        Sexo: <input type="text" name="text" /><br />
-        Endereço: <input type="text" name="texty" /><br />
+        CPF: <input type="number" name="CPF" /><br />
+        Data de Nascimento: <input type="number" name="datadenascimento" /><br />
+        Sexo: <input type="text" name="sexo" /><br />
+        Endereço: <input type="text" name="endereco" /><br />
         <input type="submit" value="CADASTRAR!" />
     </form>
 </body>
 
 </html>
+
 
 
 
