@@ -1,40 +1,30 @@
 <?php
+session_start();
 include_once('database.php');
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $nome = $_POST['nome'];
-    $position = $_POST['position'];
-    $salary = $_POST['salary'];
+    $cargo = $_POST['cargo'];
+    $salario = $_POST['salario'];
+    $datadeentrada = $_POST['datadeentrada'];
 
-    $sql = "INSERT INTO formulario (nome, cargo, salario, datadeentrada) VALUES ('$nome', '$position', '$salary', NOW())";
+    $sql = "INSERT INTO formulario (nome, cargo, salario, datadeentrada) VALUES ('$nome', '$cargo', '$salario', '$datadeentrada')";
+    
     if ($conn->query($sql) === TRUE) {
-        echo "Novo registro criado com sucesso";
+        $_SESSION['msg'] = "Funcionário cadastrado com sucesso!";
     } else {
-        echo "Erro: " . $sql . "<br>" . $conn->error;
+        $_SESSION['msg'] = "Erro ao cadastrar funcionário: " . $conn->error;
     }
+    
+    $conn->close();
+    header("Location: index.php");
 }
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CRUD - Criar / Listar PHP</title>
-</head>
-    <style>
+<style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #5be4eeda;
-            height: 100vh;
-            margin: 0;
-        }
-
-        .container {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 20px;
         }
 
         h1 {
@@ -42,58 +32,112 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
 
         form {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
+            max-width: 300px;
+            margin: auto;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
         }
 
         label {
-            margin-top: 10px;
+            display: block;
+            margin: 10px 0 5px;
         }
 
-        input {
-            margin-bottom: 10px;
+        input[type="text"],
+        input[type="number"],
+        input[type="date"] {
+            width: 100%;
             padding: 8px;
+            margin-bottom: 10px;
             border: 1px solid #ccc;
             border-radius: 4px;
         }
 
+        input[type="submit"],
         button {
+            display: block;
+            width: 100%;
             padding: 10px;
+            margin: 10px 0;
             border: none;
             border-radius: 4px;
-            background-color: #007bff;
+            background-color: #4CAF50;
             color: white;
             cursor: pointer;
-            margin-top: 10px;
         }
 
+        input[type="submit"]:hover,
         button:hover {
-            background-color: #0056b3;
+            background-color: #45a049;
         }
 
-        #resultado {
-            margin-top: 20px;
-            font-size: 1.2em;
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .pagination {
             text-align: center;
+            margin-top: 20px;
         }
 
-    </style>
-<body>
-    <h1>RESGISTRE O FUNCIONÁRIO</h1>
+        .pagination a {
+            margin: 0 5px;
+            padding: 8px 16px;
+            text-decoration: none;
+            border: 1px solid #ccc;
+            color: #333;
+        }
 
-    <form method="post" action="create.php">
-        <label for="name">Nome:</label>
-        <input type="text" name="nome" required><br><br>
-        <label for="position">Cargo:</label>
-        <input type="text" name="position" required><br><br>
-        <label for="salary">Salário:</label>
-        <input type="text" name="salary" required><br><br>
-        <label for="DATADEENTRA">DATA DE ENTRADA</label>
-        <input type="text" name="dataentrada" required><br><br>
-        <input type="submit" value="REGISTRAR">
+        .pagination a:hover {
+            background-color: #ddd;
+        }
+    </style>
+
+</styl>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD - Criar Funcionário</title>
+</head>
+
+<body>
+    <h1>REGISTRAR FUNCIONÁRIO</h1>
+    <form action="create.php" method="post">
+        <label for="nome">Nome:</label>
+        <input type="text" name="nome" required><br>
+        <label for="cargo">Cargo:</label>
+        <input type="text" name="cargo" required><br>
+        <label for="salario">Salário:</label>
+        <input type="number" name="salario" required><br>
+        <label for="datadeentrada">Data de Entrada:</label>
+        <input type="date" name="datadeentrada" required><br>
+        <input type="submit" value="Cadastrar">
     </form>
+
+    <a href="listar.php"><button>LISTAR</button></a>
+
 </body>
+
 </html>
+
+
 

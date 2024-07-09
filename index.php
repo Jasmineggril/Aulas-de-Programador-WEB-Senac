@@ -1,45 +1,29 @@
 <?php
-include 'database.php';
+session_start();
+include_once('database.php');
+
+$nome = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_STRING);
+$cargo = filter_input(INPUT_POST, 'cargo', FILTER_SANITIZE_STRING);
+$salario = filter_input(INPUT_POST, 'salario', FILTER_SANITIZE_NUMBER_FLOAT);
+$datadeentrada = filter_input(INPUT_POST, 'datadeentrada', FILTER_SANITIZE_STRING);
 
 
-$sql = "SELECT id, name, position, salary, created_at FROM employees";
-$result = $conn->query($sql);
+if (!$id || !$nome || !$cargo || !$salario || !$datadeentrada) {
+    $_SESSION['msg'] = "<p style='color:red;'>Preencha todos os campos corretamente.</p>";
+    header("Location: create.php");
+    exit();
+}
+
+
+$create_user = "INSERT INTO usuarios (nome, cargo, salario, datadeentrada) VALUES ('$nome', '$cargo', '$salario', NOW())";
+$create_user_result = mysqli_query($conn, $create_user);
+
+if ($create_user_result) {
+    $_SESSION['msg'] = "<p style='color:green;'>Usuário cadastrado com sucesso.</p>";
+    header("Location: create.php");
+} else {
+    $_SESSION['msg'] = "<p style='color:red;'>Usuário não foi cadastrado com sucesso.</p>";
+    header("Location: create.php");
+}
 ?>
 
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <title>Lista de Funcionários</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <h1>EMPRESAS</h1>
-    <h2>Lista de Funcionários</h2>
-    <a href="create.php">Adicionar Novo Funcionário</a>
-    <table>
-        <tr>
-            <th>ID</th>
-            <th>Nome</th>
-            <th>Cargo</th>
-            <th>Salário</th>
-            <th>Data de Entrada</th>
-        </tr>
-        <?php
-        if ($result->num_rows > 0) {
-            while($row = $result->fetch_assoc()) {
-                echo "<tr>
-                        <td>" . $row["id"]. "</td>
-                        <td>" . $row["name"]. "</td>
-                        <td>" . $row["position"]. "</td>
-                        <td>" . $row["salary"]. "</td>
-                        <td>" . $row["entrydate"]. "</td>
-                      </tr>";
-            }
-        } else {
-            echo "<tr><td colspan='5'>Nenhum registro encontrado</td></tr>";
-        }
-        ?>
-    </table>
-</body>
-</html>
