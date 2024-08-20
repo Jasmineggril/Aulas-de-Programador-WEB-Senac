@@ -1,0 +1,36 @@
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 400px;
+}
+
+
+input {
+    padding: 5px;
+    margin: 10px 0;
+    border: 30px solid #1e3b9b;
+    border-radius: 4px;
+    width: calc(10% - 24px);
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #28a745;
+    color: #fff;
+    cursor: pointer;
+}
+
+h1{
+    text-align: center;
+}
+
+body {
+
+    text-align: center;
+    background-color: #28a745;
+}

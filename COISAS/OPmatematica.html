@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Matematica</title>
+  </head>
+  <body>
+    <h1>Operações Matemática</h1>
+    <form>
+      <input type="number" id="num1" />
+      <input type="number" id="num2" />
+      <select id="operacao">
+        <option>Escolha uma operação</option>
+        <option>Soma</option>
+        <option>Subtração</option>
+        <option>Multiplicação</option>
+        <option>Divisao</option>
+        <option>Potenciação</option>
+      </select>
+      <p id="resOperacao"></p>
+      <input type="button" value="Calcular" onclick="calcular()" />
+    </form>
+
+    <script>
+      function calcular() {
+        var num1 = Number(document.getElementById("num1").value);
+        var num2 = Number(document.getElementById("num2").value);
+        var operacao = document.getElementById("operacao").value;
+        var resOperacao = document.getElementById("resOperacao");
+
+        var resultado;
+        switch (operacao) {
+          case "Soma":
+            var resultado = num1 + num2;
+            break;
+          case "Subtracao":
+            var resultado = num1 - num2;
+            break;
+          case "Multiplicacao":
+            var resultado = num1 * num2;
+            break;
+          case "Divisao":
+            var resultado = num1 / num2;
+            break;
+          case "Potenciacao":
+            var resultado = num1 ** num2;
+            break;
+        }
+
+
+              
+
+        resOperacao.innerHTML = `Você escolheu a operação ${operacao} e o resultado foi ${resultado}`;
+      }
+    </script>
+  </body>
+</html>
+
+ </Kbd>

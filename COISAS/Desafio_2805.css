@@ -1,0 +1,52 @@
+
+h1{
+    color: rgb(7, 6, 7);
+    padding: auto;
+    -webkit-text-stroke: 1px rgb(175, 175, 48);
+    font-size: 60px;
+    text-align: center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    margin: 0 0% 0 0%;
+    color: rgb(7, 6, 7);
+    padding: auto;
+    font-size: 25px;
+}
+
+input{
+    padding: 5px;
+    margin-bottom: 25px;
+}
+
+h2{
+    color: rgb(7, 6, 7);
+    padding: auto;
+    -webkit-text-stroke: 1px rgb(7, 7, 7);
+    font-size: 35px;
+    text-align: center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+select{
+    color: rgb(7, 6, 7);
+    padding: auto;
+    -webkit-text-stroke: 1px rgb(7, 7, 7);
+    font-size: 25px;
+    text-align: center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+
+p{ color: rgb(7, 6, 7);
+    padding: auto;
+    -webkit-text-stroke: 1px white;
+    font-size: 25px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
